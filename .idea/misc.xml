@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/drawable/background_item_list.xml" value="0.1" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/drawable/bg_flash.xml" value="0.208" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/drawable/ic_baseline_content_paste.xml" value="0.1" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/drawable/ic_baseline_setting.xml" value="0.143" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/drawable/ic_capture.xml" value="0.1" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/activity_scann_result.xml" value="0.33" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/layout_loading.xml" value="0.19743589743589743" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/layout_popup_permission_require.xml" value="0.25" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/layout_stored_item_data.xml" value="0.1" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/layout/layout_stored_list_data.xml" value="0.1" />
+        <entry key="..\:/playground/android/MLKITTextRecognition/app/src/main/res/menu/result_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
