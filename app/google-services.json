@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "721237609109",
+    "project_id": "rich-jigsaw-373907",
+    "storage_bucket": "rich-jigsaw-373907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721237609109:android:d5e17fef84ac3bad99299c",
+        "android_client_info": {
+          "package_name": "com.flowerencee9.googlevision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATKNBnfgPVrEeOhFvD5M6voj-gp6L2N2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721237609109:android:fba59c9f88eb84cb99299c",
+        "android_client_info": {
+          "package_name": "com.flowerencee9.mlkittextrecognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATKNBnfgPVrEeOhFvD5M6voj-gp6L2N2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721237609109:android:1076ce3b5aa40bca99299c",
+        "android_client_info": {
+          "package_name": "com.flowerencee9.moviedbapiapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATKNBnfgPVrEeOhFvD5M6voj-gp6L2N2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721237609109:android:4aa944c187ac506d99299c",
+        "android_client_info": {
+          "package_name": "com.flowerencee9.moviedbktor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATKNBnfgPVrEeOhFvD5M6voj-gp6L2N2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721237609109-9jrpbo6p6trlias6q7jd2rtihajou389.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

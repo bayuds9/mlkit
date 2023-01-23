@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MLKITTextRecognition</string>
+    <string name="scanned_result">Scanned Result</string>
+    <string name="save_result">Save</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="read">Read</string>
+    <string name="retake">Retake</string>
+    <string name="control_flash">Flash Control</string>
+    <string name="select_from_photo_album">Select From Album</string>
+    <string name="input_image">Input Image</string>
+    <string name="copy_all_text">Copy All Text</string>
+    <string name="paste_content">Paste Content</string>
+    <string name="stored_data">Stored Data</string>
+    <string name="close">Close</string>
+    <string name="loading">Loading…</string>
+    <string name="illustration">Illustration</string>
+    <string name="permission_require">Permission Require</string>
+    <string name="permission_body">Please grant permission from device setting</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>
