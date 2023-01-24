@@ -2,12 +2,8 @@ package com.flowerencee9.mlkittextrecognition.support
 
 import android.app.Activity
 import android.app.Dialog
-import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
-import android.provider.Settings
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
@@ -30,7 +26,11 @@ fun View.setVisible(visible: Boolean) {
     }
 }
 
-fun Activity.showPopupAction(title: String, body: String, positiveClick: () -> Unit) {
+fun Activity.showPopupAction(
+    title: String,
+    body: String,
+    positiveClick: () -> Unit
+) {
     val dialog = Dialog(this, R.style.DialogSlideAnimFullWidth)
     val popupBinding = LayoutPopupFailedBinding.bind(
         layoutInflater.inflate(
@@ -48,9 +48,6 @@ fun Activity.showPopupAction(title: String, body: String, positiveClick: () -> U
     with(popupBinding) {
         lblTitle.text = title
         lblDesc.text = body
-        btnCancel.setOnClickListener {
-            dialog.dismiss()
-        }
         btnOk.setOnClickListener {
             positiveClick()
             dialog.dismiss()

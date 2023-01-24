@@ -61,14 +61,13 @@ class MainViewModel : ViewModel() {
         database.collection("scann")
             .add(storedValue)
             .addOnCompleteListener { task ->
+                _resultText.value = result
                 if (task.isSuccessful) {
-                    _resultText.value = result
                     _success.value = true
                     Log.d(TAG, "success store data ${task.result}")
                 } else {
                     task.exception?.printStackTrace()
-                    _message.value = "Failed to store value to cloud\nYou still can store it later"
-                    _resultText.value = task.exception?.message
+                    _message.value = "Failed to store value to cloud"
                     _success.value = false
                     Log.e(TAG, task.exception.toString())
                 }

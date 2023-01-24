@@ -68,6 +68,10 @@ class MainActivity : AppCompatActivity() {
         binding.cameraContainer.visibility = View.GONE
         binding.btnRead.visibility = View.VISIBLE
         binding.btnRetake.visibility = View.VISIBLE
+        if (cameraManager.isFlashOn()) {
+            cameraManager.flashControl(false)
+            binding.btnFlash.isActivated = false
+        }
         cameraManager.freezeCamera()
         setupButtonStates()
     }
@@ -141,13 +145,13 @@ class MainActivity : AppCompatActivity() {
             if (it && !loadingDialog.isShowing) loadingDialog.show()
             else {
                 loadingDialog.dismiss()
-                if (viewModel.success.value == true) {
-                    gotoResult(viewModel.resultText.value.toString())
-                } else {
-                    showPopupAction(
+                when (viewModel.success.value) {
+                    true -> gotoResult(viewModel.resultText.value.toString())
+                    else -> showPopupAction(
                         viewModel.message.value.toString(),
-                        viewModel.resultText.value.toString()) {
-                        gotoResult("")
+                        viewModel.resultText.value.toString()
+                    ) {
+                        this.closeContextMenu()
                     }
                 }
             }
@@ -190,6 +194,7 @@ class MainActivity : AppCompatActivity() {
             }
             btnRetake.apply {
                 setOnClickListener {
+                    if (cameraManager.isFlashOn()) btnFlash.isActivated = false
                     cameraManager.startCamera()
                     cameraManager.deleteImage()
                     cameraContainer.setVisible(true)
