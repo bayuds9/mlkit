@@ -41,26 +41,4 @@ class ScannResultViewModel : ViewModel() {
                 Log.e(TAG, "failed retrieve stored data")
             }
     }
-
-    fun saveText(text: String) {
-        _progress.value = true
-        val storeResult = hashMapOf(
-            getCurrentTime() to text
-        )
-        database.collection("scann")
-            .add(storeResult)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    retrieveStoredText()
-                    _success.value = true
-                    Log.d(TAG, "success store data ${task.result}")
-                } else {
-                    _success.value = false
-                    task.exception?.printStackTrace()
-                    Log.e(TAG, task.exception.toString())
-                    Log.d(TAG, "failed store data $storeResult")
-                }
-                _progress.value = false
-            }
-    }
 }

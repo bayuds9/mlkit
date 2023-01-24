@@ -10,13 +10,11 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.text.Editable
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +22,7 @@ import com.flowerencee9.mlkittextrecognition.R
 import com.flowerencee9.mlkittextrecognition.databinding.ActivityScannResultBinding
 import com.flowerencee9.mlkittextrecognition.databinding.LayoutStoredListDataBinding
 import com.flowerencee9.mlkittextrecognition.support.showLoadingDialog
+import kotlinx.coroutines.launch
 
 class ScannResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityScannResultBinding
@@ -52,7 +51,7 @@ class ScannResultActivity : AppCompatActivity() {
     }
 
     private fun dataObserver() {
-        lifecycleScope.launchWhenStarted {
+        lifecycleScope.launch {
             viewModel.retrieveStoredText()
         }
         viewModel.storedText.observe(this) {
@@ -60,6 +59,7 @@ class ScannResultActivity : AppCompatActivity() {
         }
         viewModel.success.observe(this) {
             Toast.makeText(this, "saving text success $it", Toast.LENGTH_SHORT).show()
+            viewModel.retrieveStoredText()
         }
         viewModel.progress.observe(this) {
             if (it && !loadingDialog.isShowing) loadingDialog.show()
@@ -76,14 +76,6 @@ class ScannResultActivity : AppCompatActivity() {
             loadingDialog = showLoadingDialog(root)
             etResult.apply {
                 resultText?.let { setText(it) }
-                addTextChangedListener { text: Editable? ->
-                    btnSave.isEnabled = text.toString().isNotEmpty()
-                }
-            }
-            btnSave.apply {
-                setOnClickListener {
-                    viewModel.saveText(etResult.text.toString())
-                }
             }
         }
         setupDialog()
